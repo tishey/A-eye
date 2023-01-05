@@ -1,4 +1,5 @@
  import 'package:a_eye/src/feature/home_view/data/home_data.dart';
+import 'package:a_eye/src/feature/home_view/presentation/view/drawer_content.dart';
 import 'package:a_eye/src/feature/home_view/widget/feature_card_option.dart';
 import 'package:a_eye/src/share/res/app_string.dart';
 import 'package:a_eye/src/share/res/styling.dart';
@@ -6,21 +7,27 @@ import 'package:a_eye/src/share/res/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+   HomeView({super.key});
+
+  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _globalKey,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: Image.asset(AppString.appImage, width: screenAwareSize(100, context),),
-        leading: IconButton(
-        onPressed: (){}, 
+        title: Image.asset(AppString.appImage,
+        width: screenAwareSize(100, context),),
+      
+       leading:  IconButton(
+        onPressed: () => _globalKey.currentState!.openDrawer(), 
         icon: const Icon(Icons.menu, color: Colors.black,)
         ),
         ),
+          drawer: const DrawerContent(),
           body: Container(
             height: screenHeight(context),
             width: screenWidth(context),
@@ -73,7 +80,9 @@ class HomeView extends StatelessWidget {
               ),
               ],
             )
-      ));
+      ),
+      
+      );
     
     
   }

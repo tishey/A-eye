@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class OnBoardingWidget1 extends StatelessWidget {
   OnBoardingListClass onBoardingList = OnBoardingListClass();
  final  int index;
-  OnBoardingWidget1({Key? key, required this.index}) : super(key: key);
+   OnBoardingWidget1({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

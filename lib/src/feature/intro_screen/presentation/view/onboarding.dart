@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -19,7 +21,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
 
-  late PageController _pageController;
+  late  PageController _pageController;
 
   @override
   void initState() {
@@ -94,7 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               UIHelper.verticalSpaceMedium,
                  AEyeButton(
                    textColor: Colors.black,
-                   onClick: ()=> navigateAndRemoveUntilRoute(context, const HomeView()),
+                   onClick: ()=> navigateAndRemoveUntilRoute(context,  HomeView()),
                    label: 'Get Started')
                   
                   ],

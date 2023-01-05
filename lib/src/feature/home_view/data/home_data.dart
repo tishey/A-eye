@@ -17,5 +17,13 @@
   static String sketchImage = 'asset/images/gallery-edit.png';
   static String sketchLabel = 'Sketch or Real';
    static String sketchDesc = 'Get life image result using skethed images';
+   static String fImage = 'asset/images/Facebook1.png';
+   static String gImage = 'asset/images/Google.png';
+   static String lImage = 'asset/images/like.png';
+   static String lLabel = 'Rate us';
+   static String senImage = 'asset/images/share1.png';
+   static String senLabel = 'Send Feedback';
+   static String mesImage = 'asset/images/messages.png';
+   static String mesLabel = 'Share App Link';
   
   }

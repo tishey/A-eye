@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future<dynamic> _navigateToOnBoarding() {
     return Future.delayed(const Duration(seconds: 3), () {
       // context.go(RoutePaths.onBoarding);
-      navigateAndRemoveUntilRoute(context,  OnboardingScreen());
+      navigateAndRemoveUntilRoute(context, const  OnboardingScreen());
     });
   }
 
